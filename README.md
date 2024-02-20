@@ -1,6 +1,6 @@
 # TestApiForReview
 Проект релизован в качестве демонстрации работы микросервисов, контейнеров docker, брокера сообщений RabbitMQ. 
-![Схема](https://github.com/bezlla/TestApiForReview/blob/master/Scheme.png)
+![Схема](https://github.com/zelyagreen/TestApiForReview/blob/master/Scheme.png)
 Схема взаимодействия микросервисов в проекте.  
 
 Порты, на которых располагаются микросервисы:
@@ -178,12 +178,12 @@
 ### Базы данных
 
 В проекте используется 4 базы данных:
-* Для микросервиса [Identity](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Identity/Identity.DAL) 
-* Для микросервиса [Purchases](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Purchases/Purchases.DAL)
-* Для микросервиса [Shops](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Shops/Shops.DAL):
-  1. [Инициализация](https://github.com/bezlla/TestApiForReview/blob/master/src/Services/Shops/Shops.DAL/Data/ShopsDbContext.cs) 4 магазинов и по 4 товара к каждому.
-* Для микросервиса  [Factories](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Factories/Factories.DAL):
-  1. [Инициализация](https://github.com/bezlla/TestApiForReview/blob/master/src/Services/Factories/Factories.DAL/Data/FactoriesDbContext.cs) 3-4 заводов и по несколько товаров к каждому из разных магазинов
+* Для микросервиса [Identity](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Identity/Identity.DAL) 
+* Для микросервиса [Purchases](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Purchases/Purchases.DAL)
+* Для микросервиса [Shops](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Shops/Shops.DAL):
+  1. [Инициализация](https://github.com/zelyagreen/TestApiForReview/blob/master/src/Services/Shops/Shops.DAL/Data/ShopsDbContext.cs) 4 магазинов и по 4 товара к каждому.
+* Для микросервиса  [Factories](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Factories/Factories.DAL):
+  1. [Инициализация](https://github.com/zelyagreen/TestApiForReview/blob/master/src/Services/Factories/Factories.DAL/Data/FactoriesDbContext.cs) 3-4 заводов и по несколько товаров к каждому из разных магазинов
   
  Подход проектирования БД: Code first  
  Тип хранения данных: SQL Server & Docker  
@@ -266,9 +266,9 @@
 API Gateway — это высокопроизводительный, доступный и безопасный сервис размещения API,
 который помогает создавать, разворачивать программные интерфейсы приложения в любом масштабе и управлять ими.
 
-В данном проекте вы найдёте реализацию [Ocelot Api Gateway](https://github.com/bezlla/TestApiForReview/tree/master/src/TestApiForReview.ApiGateway)
+В данном проекте вы найдёте реализацию [Ocelot Api Gateway](https://github.com/zelyagreen/TestApiForReview/tree/master/src/TestApiForReview.ApiGateway)
 
-Для конфигурирования проекта подключается ```ocelot.json``` [файл](https://github.com/bezlla/TestApiForReview/blob/master/src/TestApiForReview.ApiGateway/ocelot.json), в котором расписаны пути, а также методы переадресации.
+Для конфигурирования проекта подключается ```ocelot.json``` [файл](https://github.com/zelyagreen/TestApiForReview/blob/master/src/TestApiForReview.ApiGateway/ocelot.json), в котором расписаны пути, а также методы переадресации.
 Документацию по нему вы сможете найти [здесь](https://ocelot.readthedocs.io/en/latest/features/configuration.html)
 
 ### Docker
@@ -279,14 +279,14 @@ API Gateway — это высокопроизводительный, досту�
 docker-compose pull
 docker-compose up
 ```
-Детали конфигурации docker-compose вы можете найти [здесь](https://github.com/bezlla/TestApiForReview/blob/master/src/docker-compose.yml).
+Детали конфигурации docker-compose вы можете найти [здесь](https://github.com/zelyagreen/TestApiForReview/blob/master/src/docker-compose.yml).
 ### UnitTests
 
 В проекте есть Smoke - тесты, для запуска которых необходимо запустить менеджера RabbitMQ.
 
 Они покрывают доступность функционала.
 
-Также есть Unit - тесты, которые покрывают функционал сервисов [Purchases](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Purchases/tests/Purchases.UnitTests)
-и [Shops](https://github.com/bezlla/TestApiForReview/tree/master/src/Services/Shops/tests/Shops.UnitTests).
+Также есть Unit - тесты, которые покрывают функционал сервисов [Purchases](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Purchases/tests/Purchases.UnitTests)
+и [Shops](https://github.com/zelyagreen/TestApiForReview/tree/master/src/Services/Shops/tests/Shops.UnitTests).
 
 
